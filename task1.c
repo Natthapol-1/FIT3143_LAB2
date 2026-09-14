@@ -59,7 +59,16 @@ int main(int argc, char *argv[]) {
     }
     int local_count = 0;
 
-    // Cyclic workload distribution
+    // Cyclic workload distribution:
+    // We use a cyclic distribution (i+=size) rather than static contiguous blocks.
+    // This is because larger numbers take significantly longer to check for primality
+    // than smaller numbers. A cyclic distribution ensures that the computationally
+    // heavy numbers are evenly distributed among all processes, maintaining good load balance.
+    // Example for 4 processes (size = 4):
+    // Rank 0 checks: 2, 6, 10, 14...
+    // Rank 1 checks: 3, 7, 11, 15...
+    // Rank 2 checks: 4, 8, 12, 16...
+    // Rank 3 checks: 5, 9, 13, 17...
     for (int i = 2 + rank; i < n; i += size) {
         if (is_prime(i)) {
             if (local_count >= capacity) {
@@ -82,8 +91,14 @@ int main(int argc, char *argv[]) {
     if (rank == 0) {
         counts = (int *)malloc(size * sizeof(int));
         displs = (int *)malloc(size * sizeof(int));
+        if (counts == NULL || displs == NULL) {
+            fprintf(stderr, "Memory allocation failed for counts or displs on root\n");
+            MPI_Abort(MPI_COMM_WORLD, 1);
+        }
     }
 
+    // MPI_Gather collects data from all processes to the root process (rank 0).
+    // Pattern: Send Buffer, Send Count, Send Type, Receive Buffer, Receive Count, Receive Type, Root Rank, Communicator
     MPI_Gather(&local_count, 1, MPI_INT, counts, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
     // Root calculates total primes and displacements for Gatherv
@@ -94,6 +109,10 @@ int main(int argc, char *argv[]) {
             total_primes += counts[i];
         }
         all_primes = (int *)malloc(total_primes * sizeof(int));
+        if (all_primes == NULL) {
+            fprintf(stderr, "Memory allocation failed for all_primes on root\n");
+            MPI_Abort(MPI_COMM_WORLD, 1);
+        }
     }
 
     // Gather all prime numbers into the root process
@@ -112,6 +131,7 @@ int main(int argc, char *argv[]) {
         FILE *fp = fopen("primes_output.txt", "w");
         if (fp == NULL) {
             fprintf(stderr, "Could not open file for writing\n");
+            MPI_Abort(MPI_COMM_WORLD, 1);
         } else {
             for (int i = 0; i < total_primes; i++) {
                 fprintf(fp, "%d\n", all_primes[i]);
