@@ -1,0 +1,84 @@
+=== OpenMP Comparison Experiments ===
+=== EXPERIMENT D: OpenMP Varying N (4 threads) ===
+Testing N = 1000000
+[OPENMP] Threads: 4 | Time: 0.030103 s
+Testing N = 2000000
+[OPENMP] Threads: 4 | Time: 0.076467 s
+Testing N = 3000000
+[OPENMP] Threads: 4 | Time: 0.132485 s
+Testing N = 4000000
+[OPENMP] Threads: 4 | Time: 0.195153 s
+Testing N = 5000000
+[OPENMP] Threads: 4 | Time: 0.264302 s
+Testing N = 6000000
+[OPENMP] Threads: 4 | Time: 0.340498 s
+Testing N = 7000000
+[OPENMP] Threads: 4 | Time: 0.418858 s
+Testing N = 8000000
+[OPENMP] Threads: 4 | Time: 0.505354 s
+Testing N = 9000000
+[OPENMP] Threads: 4 | Time: 0.595388 s
+Testing N = 10000000
+[OPENMP] Threads: 4 | Time: 0.689674 s
+Testing N = 11000000
+[OPENMP] Threads: 4 | Time: 0.786291 s
+Testing N = 12000000
+[OPENMP] Threads: 4 | Time: 0.886975 s
+Testing N = 13000000
+[OPENMP] Threads: 4 | Time: 0.992977 s
+Testing N = 14000000
+[OPENMP] Threads: 4 | Time: 1.105724 s
+Testing N = 15000000
+[OPENMP] Threads: 4 | Time: 1.212271 s
+Testing N = 16000000
+[OPENMP] Threads: 4 | Time: 1.325448 s
+Testing N = 17000000
+[OPENMP] Threads: 4 | Time: 1.442315 s
+Testing N = 18000000
+[OPENMP] Threads: 4 | Time: 1.561672 s
+Testing N = 19000000
+[OPENMP] Threads: 4 | Time: 1.686252 s
+Testing N = 20000000
+[OPENMP] Threads: 4 | Time: 1.812821 s
+Testing N = 21000000
+[OPENMP] Threads: 4 | Time: 1.938662 s
+Testing N = 22000000
+[OPENMP] Threads: 4 | Time: 2.069472 s
+Testing N = 23000000
+[OPENMP] Threads: 4 | Time: 2.200666 s
+Testing N = 24000000
+[OPENMP] Threads: 4 | Time: 2.338031 s
+Testing N = 25000000
+[OPENMP] Threads: 4 | Time: 2.472516 s
+Testing N = 26000000
+[OPENMP] Threads: 4 | Time: 2.633065 s
+Testing N = 27000000
+[OPENMP] Threads: 4 | Time: 2.756162 s
+Testing N = 28000000
+[OPENMP] Threads: 4 | Time: 2.902387 s
+Testing N = 29000000
+[OPENMP] Threads: 4 | Time: 3.046093 s
+Testing N = 30000000
+[OPENMP] Threads: 4 | Time: 3.209926 s
+
+=== EXPERIMENT E: OpenMP Varying Thread Count (N=20M) ===
+Testing with 1 threads...
+[OPENMP] Threads: 1 | Time: 6.966146 s
+Testing with 2 threads...
+[OPENMP] Threads: 2 | Time: 3.556355 s
+Testing with 4 threads...
+[OPENMP] Threads: 4 | Time: 1.811547 s
+Testing with 8 threads...
+[OPENMP] Threads: 8 | Time: 0.942908 s
+Testing with 12 threads...
+[OPENMP] Threads: 12 | Time: 0.659627 s
+Testing with 16 threads...
+[OPENMP] Threads: 16 | Time: 0.518172 s
+
+=== EXPERIMENT F: OpenMP matching Hybrid total units (N=20M) ===
+Testing with 4 threads (matching hybrid total units)...
+[OPENMP] Threads: 4 | Time: 1.811287 s
+Testing with 8 threads (matching hybrid total units)...
+[OPENMP] Threads: 8 | Time: 0.943129 s
+Testing with 16 threads (matching hybrid total units)...
+[OPENMP] Threads: 16 | Time: 0.527245 s
