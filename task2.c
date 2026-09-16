@@ -27,7 +27,7 @@ int compare_ints(const void *a, const void *b) {
 int main(int argc, char *argv[]) {
     int rank, size;
     int n = 0;
-    double start_time, end_time;
+    double start_time, end_time, loop_start, loop_end, max_loop_time;
 
     // Initialize MPI with Thread Support
     int provided;
@@ -66,6 +66,10 @@ int main(int argc, char *argv[]) {
     }
     int local_count = 0;
 
+    // Start parallel timing
+    MPI_Barrier(MPI_COMM_WORLD);
+    loop_start = MPI_Wtime();
+
     // Cyclic workload distribution across MPI processes
     // AND Shared Memory Parallelism (OpenMP) across threads within each process.
     // We use a guided schedule for OpenMP to dynamically balance the varying workload
@@ -88,6 +92,10 @@ int main(int argc, char *argv[]) {
             }
         }
     }
+
+    loop_end = MPI_Wtime();
+    double local_loop_time = loop_end - loop_start;
+    MPI_Reduce(&local_loop_time, &max_loop_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
 
     // Root gathers the counts of primes from each process
     int *counts = NULL;
@@ -129,7 +137,9 @@ int main(int argc, char *argv[]) {
         qsort(all_primes, total_primes, sizeof(int), compare_ints);
         
         end_time = MPI_Wtime(); // Stop timer
-        printf("Time taken: %f seconds\n", end_time - start_time);
+        double total_time = end_time - start_time;
+        printf("[TASK2_HYBRID] Total Time: %f s | Parallel Loop Time: %f s | Serial Overhead: %f s\n", 
+               total_time, max_loop_time, total_time - max_loop_time);
         printf("Total primes found less than %d: %d\n", n, total_primes);
 
         // Write to output file
