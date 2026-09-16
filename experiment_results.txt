@@ -1,0 +1,198 @@
+=== FIT3143 LAB 2 TASK 3 EXPERIMENTS ===
+=== EXPERIMENT A: Varying N (30 values) ===
+Testing N = 1000000
+  [Serial]
+[SERIAL] Time taken: 0.102636 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 0.076701 s | Parallel Loop Time: 0.051337 s | Serial Overhead: 0.025364 s
+Testing N = 2000000
+  [Serial]
+[SERIAL] Time taken: 0.269660 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 0.167625 s | Parallel Loop Time: 0.134311 s | Serial Overhead: 0.033315 s
+Testing N = 3000000
+  [Serial]
+[SERIAL] Time taken: 0.478435 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 0.271371 s | Parallel Loop Time: 0.236832 s | Serial Overhead: 0.034539 s
+Testing N = 4000000
+  [Serial]
+[SERIAL] Time taken: 0.710361 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 0.383018 s | Parallel Loop Time: 0.355089 s | Serial Overhead: 0.027929 s
+Testing N = 5000000
+  [Serial]
+[SERIAL] Time taken: 0.979611 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 0.536242 s | Parallel Loop Time: 0.486059 s | Serial Overhead: 0.050183 s
+Testing N = 6000000
+  [Serial]
+[SERIAL] Time taken: 1.263734 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 0.675289 s | Parallel Loop Time: 0.628642 s | Serial Overhead: 0.046647 s
+Testing N = 7000000
+  [Serial]
+[SERIAL] Time taken: 1.579146 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 0.848347 s | Parallel Loop Time: 0.796040 s | Serial Overhead: 0.052307 s
+Testing N = 8000000
+  [Serial]
+[SERIAL] Time taken: 1.912144 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 1.007304 s | Parallel Loop Time: 0.943694 s | Serial Overhead: 0.063610 s
+Testing N = 9000000
+  [Serial]
+[SERIAL] Time taken: 2.228596 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 1.198743 s | Parallel Loop Time: 1.142064 s | Serial Overhead: 0.056679 s
+Testing N = 10000000
+  [Serial]
+[SERIAL] Time taken: 2.630511 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 1.353555 s | Parallel Loop Time: 1.300683 s | Serial Overhead: 0.052873 s
+Testing N = 11000000
+  [Serial]
+[SERIAL] Time taken: 2.960195 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 1.535287 s | Parallel Loop Time: 1.480553 s | Serial Overhead: 0.054734 s
+Testing N = 12000000
+  [Serial]
+[SERIAL] Time taken: 3.347243 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 1.733577 s | Parallel Loop Time: 1.676005 s | Serial Overhead: 0.057571 s
+Testing N = 13000000
+  [Serial]
+[SERIAL] Time taken: 3.749838 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 2.377963 s | Parallel Loop Time: 2.309533 s | Serial Overhead: 0.068430 s
+Testing N = 14000000
+  [Serial]
+[SERIAL] Time taken: 4.161630 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 2.493425 s | Parallel Loop Time: 2.424861 s | Serial Overhead: 0.068564 s
+Testing N = 15000000
+  [Serial]
+[SERIAL] Time taken: 4.594271 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 2.458809 s | Parallel Loop Time: 2.390536 s | Serial Overhead: 0.068273 s
+Testing N = 16000000
+  [Serial]
+[SERIAL] Time taken: 5.028043 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 2.589815 s | Parallel Loop Time: 2.517521 s | Serial Overhead: 0.072294 s
+Testing N = 17000000
+  [Serial]
+[SERIAL] Time taken: 5.478487 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 2.817773 s | Parallel Loop Time: 2.740953 s | Serial Overhead: 0.076820 s
+Testing N = 18000000
+  [Serial]
+[SERIAL] Time taken: 5.943717 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 3.053069 s | Parallel Loop Time: 2.974831 s | Serial Overhead: 0.078238 s
+Testing N = 19000000
+  [Serial]
+[SERIAL] Time taken: 6.417095 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 3.631677 s | Parallel Loop Time: 3.546878 s | Serial Overhead: 0.084799 s
+Testing N = 20000000
+  [Serial]
+[SERIAL] Time taken: 6.904277 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 3.671295 s | Parallel Loop Time: 3.587389 s | Serial Overhead: 0.083906 s
+Testing N = 21000000
+  [Serial]
+[SERIAL] Time taken: 7.400371 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 3.842217 s | Parallel Loop Time: 3.750933 s | Serial Overhead: 0.091284 s
+Testing N = 22000000
+  [Serial]
+[SERIAL] Time taken: 7.902706 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 4.323842 s | Parallel Loop Time: 4.228352 s | Serial Overhead: 0.095491 s
+Testing N = 23000000
+  [Serial]
+[SERIAL] Time taken: 8.423128 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 4.632731 s | Parallel Loop Time: 4.534008 s | Serial Overhead: 0.098723 s
+Testing N = 24000000
+  [Serial]
+[SERIAL] Time taken: 8.951760 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 4.844413 s | Parallel Loop Time: 4.742965 s | Serial Overhead: 0.101448 s
+Testing N = 25000000
+  [Serial]
+[SERIAL] Time taken: 9.546637 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 4.847622 s | Parallel Loop Time: 4.747157 s | Serial Overhead: 0.100465 s
+Testing N = 26000000
+  [Serial]
+[SERIAL] Time taken: 10.031483 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 5.436640 s | Parallel Loop Time: 5.330819 s | Serial Overhead: 0.105822 s
+Testing N = 27000000
+  [Serial]
+[SERIAL] Time taken: 10.644161 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 5.564915 s | Parallel Loop Time: 5.456587 s | Serial Overhead: 0.108328 s
+Testing N = 28000000
+  [Serial]
+[SERIAL] Time taken: 11.147629 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 6.002762 s | Parallel Loop Time: 5.888083 s | Serial Overhead: 0.114679 s
+Testing N = 29000000
+  [Serial]
+[SERIAL] Time taken: 11.699289 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 6.295243 s | Parallel Loop Time: 6.170733 s | Serial Overhead: 0.124510 s
+Testing N = 30000000
+  [Serial]
+[SERIAL] Time taken: 12.294294 seconds
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 6.549268 s | Parallel Loop Time: 6.421251 s | Serial Overhead: 0.128017 s
+
+=== EXPERIMENT B: Varying MPI Processes ===
+Testing with N = 20000000
+  [Serial Baseline]
+[SERIAL] Time taken: 7.079914 seconds
+  [MPI (1 processes)]
+[TASK1_MPI] Total Time: 7.028286 s | Parallel Loop Time: 6.971377 s | Serial Overhead: 0.056909 s
+  [MPI (2 processes)]
+[TASK1_MPI] Total Time: 9.131119 s | Parallel Loop Time: 9.051219 s | Serial Overhead: 0.079900 s
+  [MPI (4 processes)]
+[TASK1_MPI] Total Time: 4.191475 s | Parallel Loop Time: 4.100588 s | Serial Overhead: 0.090887 s
+  [MPI (8 processes)]
+[TASK1_MPI] Total Time: 1.992068 s | Parallel Loop Time: 1.879414 s | Serial Overhead: 0.112654 s
+  [MPI (12 processes)]
+[TASK1_MPI] Total Time: 1.982993 s | Parallel Loop Time: 1.870663 s | Serial Overhead: 0.112330 s
+  [MPI (16 processes)]
+[TASK1_MPI] Total Time: 0.982471 s | Parallel Loop Time: 0.864298 s | Serial Overhead: 0.118173 s
+  [MPI (24 processes)]
+[TASK1_MPI] Total Time: 1.008448 s | Parallel Loop Time: 0.890853 s | Serial Overhead: 0.117595 s
+  [MPI (32 processes)]
+[TASK1_MPI] Total Time: 0.805180 s | Parallel Loop Time: 0.690279 s | Serial Overhead: 0.114901 s
+
+=== EXPERIMENT C: Hybrid OpenMPI + OpenMP ===
+Testing with N = 20000000
+  [Hybrid (2 processes, 2 threads)]
+[TASK2_HYBRID] Total Time: 3.798102 s | Parallel Loop Time: 3.680888 s | Serial Overhead: 0.117215 s
+  [Hybrid (4 processes, 1 threads)]
+[TASK2_HYBRID] Total Time: 3.661510 s | Parallel Loop Time: 3.578428 s | Serial Overhead: 0.083082 s
+  [Hybrid (1 processes, 4 threads)]
+[TASK2_HYBRID] Total Time: 1.913556 s | Parallel Loop Time: 1.811578 s | Serial Overhead: 0.101979 s
+  [Hybrid (4 processes, 2 threads)]
+[TASK2_HYBRID] Total Time: 1.975805 s | Parallel Loop Time: 1.853141 s | Serial Overhead: 0.122664 s
+  [Hybrid (2 processes, 4 threads)]
+[TASK2_HYBRID] Total Time: 1.961485 s | Parallel Loop Time: 1.825208 s | Serial Overhead: 0.136277 s
+  [Hybrid (8 processes, 1 threads)]
+[TASK2_HYBRID] Total Time: 1.907972 s | Parallel Loop Time: 1.797340 s | Serial Overhead: 0.110632 s
+  [Hybrid (4 processes, 4 threads)]
+[TASK2_HYBRID] Total Time: 1.042985 s | Parallel Loop Time: 0.906415 s | Serial Overhead: 0.136571 s
+  [Hybrid (8 processes, 2 threads)]
+[TASK2_HYBRID] Total Time: 1.068663 s | Parallel Loop Time: 0.930689 s | Serial Overhead: 0.137974 s
+  [Hybrid (16 processes, 1 threads)]
+[TASK2_HYBRID] Total Time: 1.036060 s | Parallel Loop Time: 0.916339 s | Serial Overhead: 0.119721 s
+  [Hybrid (8 processes, 4 threads)]
+[TASK2_HYBRID] Total Time: 0.632807 s | Parallel Loop Time: 0.492617 s | Serial Overhead: 0.140189 s
+  [Hybrid (16 processes, 2 threads)]
+[TASK2_HYBRID] Total Time: 0.662305 s | Parallel Loop Time: 0.517962 s | Serial Overhead: 0.144343 s
