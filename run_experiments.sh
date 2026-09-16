@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=task3_experiments
-#SBATCH --time=01:00:00
+#SBATCH --time=00:20:00
 #SBATCH --mem=8G
-#SBATCH --nodes=1
+#SBATCH --nodes=1-2
 #SBATCH --ntasks=32
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=defq
